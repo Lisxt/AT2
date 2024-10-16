@@ -1,0 +1,20 @@
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		
+		Peca p = new Peca ("calça", 10 ,20);
+		PecaImportada pI = new PecaImportada("Velztorm Lux Custom ", 100 , 150, 20, 35);
+		
+		System.out.printf("\n*---------------------------------*\n");
+		
+		System.out.print("Valor da peça:\n\n");
+		p.exibir();
+		
+		System.out.printf("\n*---------------------------------*\n");
+		
+		System.out.print("Valor da peça Importada:\n\n");
+		pI.exibir();
+	}
+
+}
