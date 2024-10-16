@@ -1,0 +1,51 @@
+public class Peca {
+
+	//atributos 
+	
+	protected String nome;
+	protected float custo;
+	protected float lucro;
+	
+	//contrutor
+	public Peca(String nome, float custo, float lucro){
+		this.nome = nome;
+		this.lucro = lucro;
+		this.custo = custo;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	
+	public float getCusto() {
+		return custo;
+	}
+	public void setCusto(float custo) {
+		this.custo = custo;
+	}
+
+
+	public float getLucro() {
+		return lucro;
+	}
+	public void setLucro(float lucro) {
+		this.lucro = lucro;
+	}
+
+
+
+	//metodos
+	public float calcularPreco() {
+		float precoF = custo + lucro;
+		return precoF;
+	}
+	
+	public void exibir(){
+		System.out.println("Nome do produto:" + nome + "\nCusto:" + custo +
+				"\nLucro:" + lucro + "\nPreço Base:" + calcularPreco());
+	}
+}
