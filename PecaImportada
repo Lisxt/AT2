@@ -1,0 +1,46 @@
+public class PecaImportada extends Peca {
+
+	//atributos
+	
+	protected float taxaImportacao;
+	protected float taxaFrete;
+	
+	//construtor 
+	public PecaImportada(String nome, float custo, float lucro, float taxaImportacao,  float taxaFrete){
+		super(nome, custo, lucro);
+		this.taxaImportacao = taxaImportacao;
+		this.taxaFrete = taxaFrete;
+	}
+
+	public float getTaxaImportacao() {
+		return taxaImportacao;
+	}
+	public void setTaxaImportacao(float taxaImportacao) {
+		this.taxaImportacao = taxaImportacao;
+	}
+
+	
+	public float getTaxaFrete() {
+		return taxaFrete;
+	}
+	public void setTaxaFrete(float taxaFrete) {
+		this.taxaFrete = taxaFrete;
+	}
+	
+	//metodos
+	
+	public float calcularPrecoT() {
+		return custo + lucro + taxaFrete + taxaImportacao;
+	}
+	
+	public void exibir(){
+		
+		super.exibir();
+		System.out.println("\nPreço importado:" + calcularPrecoT());
+
+	}
+	
+	
+	
+}
+
